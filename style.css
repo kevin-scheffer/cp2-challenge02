@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    background:#ffffff;
+}
+
+section.overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+
+    grid-gap: 0.6rem;
+    grid-template-areas: 
+    "card01 card02 card03"
+    "card04 card05 card06" 
+    "card07 card08 card09"
+    "card10 card10 card10"
+    ;
+}
+
+.canvas {
+    position: absolute;
+    left: 0rem;
+    z-index: -1;
+}
+
+#sound01 { grid-area: card01; background-color: #f70000ec }
+#sound02 { grid-area: card02; background-color: #ffd900e3}
+#sound03 { grid-area: card03; background-color: #1cc402}
+#sound04 { grid-area: card04; background-color: #00abc1}
+#sound05 { grid-area: card05; background-color: #f70000ec }
+#sound06 { grid-area: card06; background-color: #ffd900e3}
+#sound07 { grid-area: card07; background-color: #1cc402}
+#sound08 { grid-area: card08; background-color: #00abc1}
+#sound09 { grid-area: card09; background-color: #f70000ec }
+#sound10 { grid-area: card10; background-color: #ffd900e3}
+
+#sound01:hover, #sound05:hover, #sound09:hover { background-color: #dd0000 }
+#sound02:hover, #sound06:hover, #sound10:hover { background-color: #e0c00c}
+#sound03:hover, #sound07:hover { background-color: #1bad04}
+#sound04:hover, #sound08:hover { background-color: #0194a7}
+
+aside { grid-area: aside; }
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 0.15rem;
+
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255, 255, 255, 0.328), inset -0.2em -0.2em 0.6em 0 rgba(0,0,0,0.5);
+    background-color: #a8a8a8;
+}
+
+article:hover {
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(4, 4, 4, 0.5), inset -0.2em -0.2em 0.6em 0 rgba(255, 255, 255, 0.404);
+}
+
+article#sound10 {
+    flex-direction: row;
+    height: 10rem;
+}
+
+p {
+    color: #000000;
+    font-size: 1.25rem;
+    padding: 1rem;
+    margin-top: -3rem;
+}
+
+#sound07 p {
+    font-size: 0.9rem;
+}
+
+#sound10 p {
+    margin-top: 0rem;
+}
+
+button {
+    font-size: 1.25rem;
+    margin: 5rem;
+
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+}
+
+button:hover {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+button#soundButton10 {
+    margin: 3rem;
+}
+
+
+input[type="range"] {
+    appearance: none;
+    -webkit-appearance: slider-vertical;
+
+    cursor: pointer;
+    margin: 3rem;
+    height: 90vh;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 1rem;
+    background-color: #1b1919;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    width: 10rem;
+    background-color: #b9b9b9;
+}
